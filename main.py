@@ -22,15 +22,12 @@ for position in starting_positions:
     segments.append(new_segment)
 
 
-
-
 game_is_on = True
 while game_is_on:
+    screen.update()
+    time.sleep(0.1)
     for seg in segments:
         seg.forward(20)
-        screen.update()
-        time.sleep(1)
-
-
-
+        
+       
 screen.exitonclick()
