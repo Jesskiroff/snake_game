@@ -16,7 +16,21 @@ segments = []
 for position in starting_positions:
     segment= Turtle("square")
     segment.color("white")
+    segment.penup()
     segment.goto(position)
+    segments.append(segment)
+
+
+screen.update()
+
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
+    for seg in segments:
+        seg.forward(20)
+        
+        
 
 
 
